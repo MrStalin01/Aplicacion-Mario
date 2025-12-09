@@ -7,6 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/coralViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
     <TextView
         android:id="@+id/mainTV"
         android:textColor="@color/white"
@@ -35,6 +41,16 @@
         app:layout_constraintTop_toBottomOf="@+id/mainET"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/SaludoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

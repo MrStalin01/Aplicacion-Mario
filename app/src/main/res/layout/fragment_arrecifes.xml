@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainfr.Arrecifes">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="250dp"
+        android:text="Este es el primer Fragment. Desliza para ver el segundo Fragment" />
+    />
+
+</FrameLayout>

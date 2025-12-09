@@ -40,13 +40,9 @@ public class Login extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**
-                 * No hace falta
-                 */
-                String username = String.valueOf(loginTIL.getEditText().getText());
-                Toast toast = Toast.makeText(Login.this, username, Toast.LENGTH_SHORT);
-                toast.show();
-                //
+                // String username = String.valueOf(loginTIL.getEditText().getText());
+                // Toast toast = Toast.makeText(Login.this, username, Toast.LENGTH_SHORT);
+                // toast.show();
                 Intent intentMain = new Intent(Login.this, MainActivity.class);
                 startActivity(intentMain);
 
@@ -56,15 +52,9 @@ public class Login extends AppCompatActivity {
         loginTVRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                Intent intentRegister = new Intent(Login.this, Register.class);
+                startActivity(intentRegister);
             }
         });
-
-
-        /**
-         * TAREA: HACER UNA ACTIVIDAD PARA REGISTRARSE Y PODER LLEGAR A ELLA DESDE EL loginTVRegister
-         */
-
     }
 }
