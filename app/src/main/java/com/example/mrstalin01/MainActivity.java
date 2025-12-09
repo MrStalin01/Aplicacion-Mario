@@ -1,9 +1,7 @@
 package com.example.mrstalin01;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,15 +10,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.mrstalin01.frmanager.Paginador;
 import com.example.mrstalin01.databinding.ActivityMainBinding;
-
+import com.example.mrstalin01.frmanager.Paginador;
 
 public class MainActivity extends AppCompatActivity {
-
-    Button mainButton;
-    TextView mainTV;
-    int contador;
     private ActivityMainBinding binding;
 
     @Override
@@ -33,30 +26,17 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         Paginador paginador = new Paginador(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.coralViewPager;
+        ViewPager viewPager = binding.AppViewpager;
         viewPager.setAdapter(paginador);
 
-        Button mainButton = findViewById(R.id.mainButton);
-        TextView mainTV = findViewById(R.id.mainTV);
-        TextView SaludoUser = findViewById(R.id.SaludoUser);
-
-        Bundle bundle = getIntent().getExtras();
-        String nombre = bundle.getString("nombre");
-        SaludoUser.setText("Bienvenido, " + nombre);
-
-        contador = 0;
-        mainTV.setText(String.valueOf(contador));
-
-        mainButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                contador++;
-                mainTV.setText(String.valueOf(contador));
-            }
-        });
+        // TextView textMain = findViewById(R.id.Saludo);
+        // Bundle bundle = getIntent().getExtras();
+        // String username = bundle.getString("username");
+        // textMain.setText("Hello " + username);
     }
 }

@@ -3,15 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".mainfr.Arrecifes">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="373dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
-        android:text="Este es el primer Fragment. Desliza para ver el segundo Fragment" />
-    />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <include layout="@layout/card_arrecife" android:id="@+id/tarjeta1"/>
+            <include layout="@layout/card_arrecife" android:id="@+id/tarjeta2"/>
+            <include layout="@layout/card_arrecife" android:id="@+id/tarjeta3"/>
+            <include layout="@layout/card_arrecife" android:id="@+id/tarjeta4"/>
+            <include layout="@layout/card_arrecife" android:id="@+id/tarjeta5"/>
+            <include layout="@layout/card_arrecife" android:id="@+id/tarjeta6"/>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>
